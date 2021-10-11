@@ -1,5 +1,13 @@
 function sum(a, b) {
-  /* ваш код */
+  
+  for ( let arg of [a, b] ) {
+    if ( typeof arg !== 'number' ) {
+      throw new TypeError( arg + ' — не является числом!');
+    }
+  }
+  
+  return a + b;
+
 }
 
 module.exports = sum;
